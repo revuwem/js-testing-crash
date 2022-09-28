@@ -1,8 +1,6 @@
-import logo from "./logo.svg";
-import "./App.css";
 import { useEffect, useState } from "react";
 
-function App() {
+function Sample() {
   const [data, setData] = useState(null);
   const [toggle, setToggle] = useState(false);
   const [inputValue, setInputValue] = useState("");
@@ -35,4 +33,4 @@ function App() {
   );
 }
 
-export default App;
+export default Sample;

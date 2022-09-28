@@ -2,11 +2,11 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import App from "./App";
+import Sample from "./Sample";
 
-describe("App", () => {
+describe("Sample", () => {
   test("should render all elements", () => {
-    render(<App />);
+    render(<Sample />);
     const helloWorldElement = screen.getByText(/hello world/i);
     expect(helloWorldElement).toBeInTheDocument();
     const button = screen.getByRole("button");
@@ -18,20 +18,20 @@ describe("App", () => {
   });
 
   test("should not render 'hello2'", () => {
-    render(<App />);
+    render(<Sample />);
     const unwantedElement = screen.queryByText(/hello world2/i);
     expect(unwantedElement).toBeNull();
   });
 
   test("should render data container", async () => {
-    render(<App />);
+    render(<Sample />);
     const dataContainer = await screen.findByText(/data/i);
     expect(dataContainer).toBeInTheDocument();
     expect(dataContainer).toHaveStyle({ color: "red" });
   });
 
   test("toggle button should toggle", () => {
-    render(<App />);
+    render(<Sample />);
     const toggleBtn = screen.getByTestId("toggle-btn");
     expect(screen.queryByTestId("toggle-info")).toBeNull();
     fireEvent.click(toggleBtn);
@@ -41,7 +41,7 @@ describe("App", () => {
   });
 
   test("input value should change", () => {
-    render(<App />);
+    render(<Sample />);
     const inputValue = "something";
     const input = screen.getByPlaceholderText(/type something\.\.\./i);
     expect(screen.queryByTestId("input-value")).toContainHTML("");
