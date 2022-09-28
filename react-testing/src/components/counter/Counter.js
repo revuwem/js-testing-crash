@@ -12,7 +12,7 @@ export default function Counter() {
   return (
     <div className="counter">
       <button onClick={onDecrement}>-</button>
-      <span className="counter-count">{value}</span>
+      <span data-testid="counter-value">{value}</span>
       <button onClick={onIncrement}>+</button>
     </div>
   );
