@@ -1,9 +1,6 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Dashboard from "./components/pages/Dashboard";
-import NotFound from "./components/pages/NotFound";
+import { Link } from "react-router-dom";
+import AppRouter from "./components/app-router/AppRouter";
 
 const App = () => {
   return (
@@ -33,12 +30,7 @@ const App = () => {
 
       <hr />
 
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <AppRouter />
     </div>
   );
 };
