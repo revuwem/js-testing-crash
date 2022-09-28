@@ -24,6 +24,11 @@ const App = () => {
             Dashboard
           </Link>
         </li>
+        <li>
+          <Link to="/users" data-testid="link-users">
+            Users
+          </Link>
+        </li>
       </ul>
 
       <hr />
