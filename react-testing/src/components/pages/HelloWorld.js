@@ -14,7 +14,7 @@ const HelloWorld = () => {
       <button id="toggler" onClick={onToogle}>
         Toggle
       </button>
-      {visible && <p>Foo Baz</p>}
+      {visible && <p id="hello">Foo Baz</p>}
     </div>
   );
 };
