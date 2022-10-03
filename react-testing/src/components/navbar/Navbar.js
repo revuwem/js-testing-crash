@@ -23,6 +23,11 @@ export default function Navbar() {
           Users
         </Link>
       </li>
+      <li>
+        <Link to="/helloworld" data-testid="link-users">
+          Hello World
+        </Link>
+      </li>
     </ul>
   );
 }
